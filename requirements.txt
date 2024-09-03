@@ -1,0 +1,11 @@
+black
+bump2version
+openpyxl
+pandas
+pytest
+pytest-cov
+scikit-learn
+tensorboard
+timm
+torchmetrics
+tqdm
