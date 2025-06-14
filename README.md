@@ -41,17 +41,17 @@ To get started with `ReWafer-MultiDefect`, follow these steps:
 
 3. **Training**: Begin training with the following command. Adjust command-line parameters as needed:
     ```bash
-    python train.py --data_dir data/multi_class --num_classes 5 --model_name convnext_tiny.fb_in22k --batch_size 128 --epochs 30 --lr 1e-4
+    python train.py --data_dir data/multi_class --num_classes 5 --model_name convnext_tiny.fb_in22k --batch_size 128 --max_epochs 30 --lr 1e-4
     ```
 
 4. **Validation**: Evaluate model performance during or after training with this command:
     ```bash
-    python val.py --test --data_dir data/multi_class --num_classes 5 --model_name convnext_tiny.fb_in22k --load_model runs/.../best_model.pt
+    python val.py --test --data_dir data/multi_class --num_classes 5 --model_name convnext_tiny.fb_in22k --load_model_path runs/.../best_model.pt
     ```
 
 5. **Inference**: Use this command to detect and classify defects in new wafer images:
     ```bash
-    python test.py --test --num_classes 5 --model_name convnext_tiny.fb_in22k --load_model runs/.../best_model.pt --image_path .../xxx.png
+    python test.py --test --num_classes 5 --model_name convnext_tiny.fb_in22k --load_model_path runs/.../best_model.pt --image_path .../xxx.png
     ```
 
 ## Example

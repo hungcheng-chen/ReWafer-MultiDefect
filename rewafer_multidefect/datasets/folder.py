@@ -30,7 +30,7 @@ class ImageFolder(Dataset):
     Attributes:
         classes (list): List of the class names sorted alphabetically.
         class_to_idx (dict): Dict with items (class_name, class_index).
-        idx_to_class (dict): Dict with items (class_index, class_name).`
+        idx_to_class (dict): Dict with items (class_index, class_name).
         samples (list): List of (sample path, class_index) tuples
         targets (list): The class_index value for each image in the dataset
     """
@@ -153,7 +153,7 @@ class ImageFolder(Dataset):
         # open path as file to avoid ResourceWarning
         # (https://github.com/python-pillow/Pillow/issues/835)
         with open(path, "rb") as f:
-            sample = Image.open(path).convert("RGB")
+            sample = Image.open(f).convert("RGB")
 
         if self.transform is not None:
             sample = self.transform(sample)
